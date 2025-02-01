@@ -6,3 +6,7 @@ function irA(destino) {
         window.location.href = destino === 'index' ? 'index.html' : `productos/${destino}.html`;
     }
 }
+
+function anyadirACesta() {
+    alert('Perfecto! El producto se añadió a la cesta');
+}
