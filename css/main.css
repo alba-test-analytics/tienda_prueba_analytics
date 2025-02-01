@@ -40,7 +40,7 @@ nav span {
 @media (max-width: 600px) {
     nav span {
         float: none;
-        width: 100%;
+        width: 92%;
         text-align: center;
     }
 }
