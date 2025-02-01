@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Open Sans", serif;
+    background-color: #f2f2f2;
 }
 
 header {
     width: 100%;
     text-align: center;
-    background-color: coral;
+    background-color: #E4C1F9;
     font-size: 250%;
     padding: 15px 0;
 }
@@ -21,11 +24,101 @@ nav span {
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
     cursor: pointer;
 }
 
 nav span:hover {
-    background-color: #ddd;
+    background-color: #cfade2;
     color: black;
+}
+
+nav span.selected {
+    background-color: #E4C1F9;
+    color: #333;
+}
+
+section {
+    padding-top: 1%;
+}
+
+.bienvenidos {
+    padding: 1%;
+}
+
+div.enlacesProductos {
+    margin-top: 75px;
+    display: flex;
+    justify-content: space-around;
+}
+
+div.enlacesProductos div {
+    background-color: #E4C1F9;
+    color: black;
+    font-size: 125%;
+    padding: 14px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+div.enlacesProductos div:hover {
+    background-color: #cfade2;
+}
+
+.product {
+    display: inline-block;
+    width: 22%;
+    height: 350px;
+    margin: 0.5%;
+    text-align: center;
+    vertical-align: top;
+    padding: 0.5%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.product.cama {
+    background-color: #A9DEF9;
+}
+
+.product.escritorio {
+    background-color: #D0F4DE;
+}
+
+.product.espejo {
+    background-color: #FCF6BD;
+}
+
+.product.sofa {
+    background-color: #FF99C8;
+}
+
+.product img {
+    max-width: 250px;
+    max-height: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product img:hover {
+    transform: scale(1.05);
+}
+
+.product p {
+    margin: 5px 0;
+}
+
+.product p:nth-child(3) {
+    font-weight: bold;
 }
